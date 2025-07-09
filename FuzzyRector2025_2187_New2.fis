@@ -1,0 +1,78 @@
+[System]
+Name='FuzzyRector2025'
+Type='mamdani'
+Version=2.0
+NumInputs=7
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Preparacion'
+Range=[0 1]
+NumMFs=3
+MF1='Maestría':'trimf',[-0.4 0 0.3]
+MF2='Doctorado':'trimf',[0.2 0.5 0.8]
+MF3='PosDoc':'trimf',[0.6 1 1.4]
+
+[Input2]
+Name='Experiencia_Director(a)'
+Range=[0 1]
+NumMFs=3
+MF1='No_Director':'trimf',[-0.4 0 0.4]
+MF2='Director_Parcial':'trimf',[0.1 0.5 0.9]
+MF3='Director_Completo':'trimf',[0.6 1 1.4]
+
+[Input3]
+Name='Experiencia_Secretario(a)'
+Range=[0 1]
+NumMFs=3
+MF1='No_Secretario(a)':'trimf',[-0.4 0 0.4]
+MF2='Secretario(a)_Parcial':'trimf',[0.202 0.5 0.802325581395349]
+MF3='Secretario(a)_Completo':'trimf',[0.6 1 1.4]
+
+[Input4]
+Name='Antigüedad_UAEM'
+Range=[0 1]
+NumMFs=3
+MF1='Menor20':'trimf',[-0.4 0 0.4]
+MF2='Entre20y30':'trimf',[0.1 0.5 0.9]
+MF3='Mayor30':'trimf',[0.6 1 1.4]
+
+[Input5]
+Name='Antiguedad_SNI'
+Range=[0 1]
+NumMFs=3
+MF1='Menor5':'trimf',[-0.4 0 0.4]
+MF2='Entre5y10':'trimf',[0.1 0.5 0.9]
+MF3='Mayor10':'trimf',[0.6 1 1.4]
+
+[Input6]
+Name='Citas:Cientificas'
+Range=[0 1]
+NumMFs=3
+MF1='Menor250':'trimf',[-0.4 0 0.4]
+MF2='Entre250y750':'trimf',[0.1 0.5 0.9]
+MF3='Mayor750':'trimf',[0.6 1 1.4]
+
+[Input7]
+Name='Programa_de_Trabajo'
+Range=[0 1]
+NumMFs=3
+MF1='Menor150':'trimf',[-0.4 0 0.4]
+MF2='Entre150y200':'trimf',[0.1 0.5 0.9]
+MF3='Mayor200':'trimf',[0.6 1 1.4]
+
+[Output1]
+Name='Posibilidad_de_Ganar'
+Range=[0 1]
+NumMFs=3
+MF1='Baja':'trimf',[-0.4 0 0.4]
+MF2='Media':'trimf',[0.1 0.5 0.9]
+MF3='Alta':'trimf',[0.6 1 1.4]
+
+[Rules]
